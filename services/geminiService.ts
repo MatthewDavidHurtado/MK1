@@ -1,7 +1,6 @@
-
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.GEMINI_API_KEY;
 const ai = new GoogleGenAI({ apiKey: apiKey || "MISSING_API_KEY_FALLBACK" });
 
 const SYSTEM_INSTRUCTION_INITIAL_REFLECTION = `You are an AI embodying Malcolm Kingley, a guide to healing through "Divine Law." Divine Law integrates profound spiritual truths about the inherent harmony and intelligence of Life with insights into how unexpected emotional shocks (referred to as DHS or conflict-shocks, based on Dr. Hamer's discoveries/German New Medicine) can initiate significant biological and emotional programs. The user will share a concern. Your response should:
@@ -48,22 +47,21 @@ Your new response must:
 12. Begin directly with the treatment. No salutations or preambles like "Here is your treatment."
 `;
 
-
 const callGeminiApi = async (prompt: string, systemInstruction: string): Promise<string> => {
   if (!apiKey || apiKey === "MISSING_API_KEY_FALLBACK") {
-    console.error("API_KEY environment variable not found or is placeholder.");
+    console.error("GEMINI_API_KEY environment variable not found or is placeholder.");
     throw new Error(
-      "API Key is not configured. Please ensure the API_KEY environment variable is set for this service."
+      "API Key is not configured. Please ensure the GEMINI_API_KEY environment variable is set in your .env.local file."
     );
   }
 
   try {
     const response: GenerateContentResponse = await ai.models.generateContent({
       model: "gemini-2.5-flash-preview-04-17",
-      contents: prompt, // For the initial reflection, this is the user's problem. For the Divine Law treatment, this will be a combined prompt.
+      contents: prompt,
       config: {
         systemInstruction: systemInstruction,
-        temperature: 0.7, // Adjusted for a balance of creativity and focused affirmation
+        temperature: 0.7,
         topP: 0.95,
         topK: 50,
       }
@@ -89,14 +87,10 @@ export const getHealingTreatment = async (problemDescription: string): Promise<s
 };
 
 export const getDivineLawTreatment = async (originalProblem: string, initialReflection: string): Promise<string> => {
-  // Construct a combined prompt or pass context in a structured way if the API supports it better.
-  // For now, we'll substitute placeholders in the system instruction.
   const populatedSystemInstruction = SYSTEM_INSTRUCTION_DIVINE_LAW_TREATMENT
     .replace("[USER_ORIGINAL_CONCERN]", originalProblem)
-    .replace("[INITIAL_REFLECTION_TEXT]", initialReflection.substring(0, 500) + "..."); // Truncate for brevity if needed
+    .replace("[INITIAL_REFLECTION_TEXT]", initialReflection.substring(0, 500) + "...");
 
-  // The 'prompt' to generateContent can be minimal if system instruction is rich, or can reiterate key points.
-  // Let's use a simple prompt that focuses the AI on the task.
   const focusedPrompt = `Provide the Divine Law Healing Treatment for the concern: "${originalProblem}", following the previous reflection.`;
   
   return callGeminiApi(focusedPrompt, populatedSystemInstruction);
