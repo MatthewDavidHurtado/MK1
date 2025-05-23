@@ -8,6 +8,7 @@ import PersonalGuidanceCTA from './components/PersonalGuidanceCTA';
 import FacebookLikeGate from './components/FacebookLikeGate';
 import TopHeader from './components/TopHeader';
 import EbookDownload from './components/EbookDownload';
+import EbookPopup from './components/EbookPopup';
 import { getHealingTreatment, getDivineLawTreatment } from './services/geminiService';
 
 const App: React.FC = () => {
@@ -83,6 +84,7 @@ const App: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen items-center text-slate-800 p-4 md:p-8 selection:bg-sky-200 selection:text-sky-900">
+      <EbookPopup />
       <FacebookLikeGate />
       <TopHeader />
       <Header />
