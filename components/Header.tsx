@@ -3,10 +3,10 @@ import React from 'react';
 const Header: React.FC = () => {
   return (
     <header className="w-full text-center py-6 md:py-10">
-      <h1 className="text-4xl md:text-5xl font-bold text-sky-700 tracking-tight">
+      <h1 className="text-4xl md:text-5xl font-bold text-amber-700 tracking-tight">
         The Secret to Financial Overflow is to Birth Supernatural Expectation By Sowing Faith-Seeds.
       </h1>
-      <p className="mt-3 text-lg md:text-xl text-slate-600 app-sans-serif">
+      <p className="mt-3 text-lg md:text-xl text-amber-600 app-sans-serif">
         The Ultimate Shortcut to Wealth and Divine Authority Is Right Here (Watch This Video).
       </p>
 
