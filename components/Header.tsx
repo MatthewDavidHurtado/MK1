@@ -21,7 +21,7 @@ const Header: React.FC = () => {
             controls
             style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}}
             preload="metadata"
-            poster="https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg"
+            poster="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg"
             className="object-cover"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
