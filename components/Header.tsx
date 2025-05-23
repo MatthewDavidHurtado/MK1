@@ -4,7 +4,9 @@ const Header: React.FC = () => {
   return (
     <header className="w-full text-center py-6 md:py-10">
       <h1 className="text-4xl md:text-5xl font-bold text-blue-900 tracking-tight">
-        The Secret to Financial Overflow is to Birth Supernatural Expectation By Sowing Faith-Seeds.
+        The Secret to Financial Overflow<br />
+        is to Birth Supernatural Expectation<br />
+        By Sowing Faith-Seeds With Love.
       </h1>
       <p className="mt-3 text-lg md:text-xl text-slate-600 app-sans-serif">
         The Ultimate Shortcut to Wealth and Divine Authority Is Right Here (Watch This Video).
