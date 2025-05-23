@@ -18,7 +18,8 @@ const UserInputForm: React.FC<UserInputFormProps> = ({ onSubmit, isLoading, valu
     <form onSubmit={handleSubmit} className="space-y-6 app-sans-serif">
       <div className="text-center mb-6">
         <h2 className="text-2xl md:text-3xl font-semibold text-blue-900 tracking-tight mb-3">
-          Divine Law Is The Key to Riches, True Romance, and Permanent Wellbeing.
+          DAILY TREATMENT APP:
+          Divine Law Treatment Is The Key to Riches, True Romance, and Permanent Wellbeing. Lift Your Thought!
         </h2>
       </div>
       <div>
