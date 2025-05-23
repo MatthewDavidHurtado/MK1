@@ -112,7 +112,29 @@ const TreatmentDisplay: React.FC<TreatmentDisplayProps> = ({
           <p className="text-slate-700 leading-relaxed mt-4 mb-6 text-justify">
             If you feel moved to sow into this work, you can do so through Allow Ministries. Your contribution helps to further the reach of these uplifting truths.
           </p>
-          <div className="text-center">
+
+          <div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; text-align: left;">
+            <div style="flex: 1;">
+              <h3 style="color: #D8000C;">🚫 This is NOT for you if:</h3>
+              <ul>
+                <li>❌ You roll your eyes at "faith" or "divine flow."</li>
+                <li>❌ You need proof before planting belief.</li>
+                <li>❌ You're only chasing money without purpose.</li>
+                <li>❌ You think hustle is the only path to wealth.</li>
+              </ul>
+            </div>
+            <div style="flex: 1;">
+              <h3 style="color: #4F8A10;">✅ This IS for you if:</h3>
+              <ul>
+                <li>✅ You believe in spiritual law + divine abundance.</li>
+                <li>✅ You're ready to give and trust supernatural timing.</li>
+                <li>✅ You've tried logic—now you're open to flow.</li>
+                <li>✅ You want overflow that blesses others too.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-6">
             <a
               href="https://www.thereisnothingbutgod.com/tithing"
               target="_blank"
