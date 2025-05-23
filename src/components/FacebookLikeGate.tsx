@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
 const FacebookLikeGate: React.FC = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
 
   useEffect(() => {
+    // Check if user has already seen the gate
     const hasSeenGate = localStorage.getItem('fbLikeGateShown');
+    
+    // If they haven't seen it, show it immediately
     if (!hasSeenGate) {
-      // Small delay to ensure the component mounts properly
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 500);
-      return () => clearTimeout(timer);
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
     }
   }, []);
 
@@ -35,7 +36,7 @@ const FacebookLikeGate: React.FC = () => {
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.onerror = null;
-            console.error('Failed to load image');
+            target.src = 'https://via.placeholder.com/128';
           }}
         />
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
