@@ -117,7 +117,7 @@ const TreatmentDisplay: React.FC<TreatmentDisplayProps> = ({
               href="https://www.thereisnothingbutgod.com/tithing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block py-3 px-8 border border-transparent rounded-lg shadow-md text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out active:bg-blue-800"
+              className="inline-block py-3 px-8 border border-transparent rounded-lg shadow-md text-lg font-medium text-black bg-amber-400 hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400 transition duration-150 ease-in-out active:bg-amber-600"
             >
               Plant Your Faith-Seed!
             </a>
