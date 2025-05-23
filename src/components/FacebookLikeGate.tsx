@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
 const FacebookLikeGate: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const hasSeenGate = localStorage.getItem('fbLikeGateShown');
-    if (hasSeenGate) {
-      setIsVisible(false);
+    if (!hasSeenGate) {
+      // Small delay to ensure the component mounts properly
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 500);
+      return () => clearTimeout(timer);
     }
   }, []);
 
@@ -19,12 +23,20 @@ const FacebookLikeGate: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 text-center">
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+      style={{ backdropFilter: 'blur(4px)' }}
+    >
+      <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 text-center relative">
         <img 
           src="https://i.imgur.com/4xHwLuT.jpg" 
           alt="Malcolm Kingley" 
           className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            console.error('Failed to load image');
+          }}
         />
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           Like Malcolm Kingley on Facebook
