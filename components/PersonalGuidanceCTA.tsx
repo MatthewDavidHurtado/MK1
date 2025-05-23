@@ -9,16 +9,14 @@ const PersonalGuidanceCTA: React.FC = () => {
       <p className="text-slate-700 leading-relaxed mb-4 text-justify md:text-center">
         If you feel a call for a more in-depth, one-on-one exploration and application of Divine Law principles to your specific situation, Malcolm Kingley offers personal consultations. These sessions are dedicated to helping you uncover and establish the harmony and wholeness that is your divine birthright.
       </p>
-      <p className="text-slate-700 leading-relaxed">
-        To inquire about personal sessions, please reach out to: 
-        <a 
-          href="mailto:tmoa@allowministries.com" 
-          className="text-blue-600 hover:text-blue-700 underline ml-1"
-          title="Email Malcolm Kingley for personal guidance"
-        >
-          tmoa@allowministries.com
-        </a>
-      </p>
+      <a 
+        href="https://calendly.com/sealintelligence/spiritual-consultation"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block py-3 px-6 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400 font-medium"
+      >
+        Book A Call
+      </a>
       <p className="mt-3 text-xs text-slate-600">
         (Serious inquiries for personalized spiritual guidance are welcome.)
       </p>
