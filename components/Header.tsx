@@ -3,10 +3,10 @@ import React from 'react';
 const Header: React.FC = () => {
   return (
     <header className="w-full text-center py-6 md:py-10">
-      <h1 className="text-4xl md:text-5xl font-bold text-amber-700 tracking-tight">
+      <h1 className="text-4xl md:text-5xl font-bold text-blue-900 tracking-tight">
         The Secret to Financial Overflow is to Birth Supernatural Expectation By Sowing Faith-Seeds.
       </h1>
-      <p className="mt-3 text-lg md:text-xl text-amber-600 app-sans-serif">
+      <p className="mt-3 text-lg md:text-xl text-slate-600 app-sans-serif">
         The Ultimate Shortcut to Wealth and Divine Authority Is Right Here (Watch This Video).
       </p>
 
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           href="https://www.thereisnothingbutgod.com/tithing"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm md:text-base text-amber-600 hover:text-amber-700 hover:underline focus:outline-none focus:ring-1 focus:ring-amber-500 focus:ring-offset-1 rounded px-1 app-sans-serif transition-colors duration-150 ease-in-out"
+          className="text-sm md:text-base text-blue-600 hover:text-blue-700 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 rounded px-1 app-sans-serif transition-colors duration-150 ease-in-out"
           title="Plant your faith-seed (opens Allow Ministries tithing page in a new tab)"
         >
           'Plant your faith-seed. Birth supernatural expectation. Rest, in faith. Receive.'
