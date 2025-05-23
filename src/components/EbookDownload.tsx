@@ -2,7 +2,7 @@ import React from 'react';
 
 const EbookDownload: React.FC = () => {
   return (
-    <div className="max-w-2xl mx-auto my-8 p-6 bg-white rounded-xl shadow-2xl border border-slate-100">
+    <div className="max-w-3xl mx-auto my-8 p-6 bg-white rounded-xl shadow-2xl border border-slate-100">
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="w-full md:w-1/3">
           <img
@@ -19,7 +19,7 @@ const EbookDownload: React.FC = () => {
             Discover the divine principles that unlock supernatural abundance in your life. This transformative guide reveals how to birth supernatural expectation through faith-seeds.
           </p>
           <button 
-            className="w-full md:w-auto px-6 py-3 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-md transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400 font-medium"
+            className="w-full md:w-auto px-6 py-3 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-md transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400 font-medium glow-button"
             onClick={() => window.open('https://www.thereisnothingbutgod.com/offers/wFkCkNJN', '_blank')}
           >
             Download Your Free Copy Now

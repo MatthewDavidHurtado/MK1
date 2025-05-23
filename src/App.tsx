@@ -84,7 +84,9 @@ const App: React.FC = () => {
     <div className="flex flex-col min-h-screen items-center text-slate-800 p-4 md:p-8 selection:bg-sky-200 selection:text-sky-900">
       <FacebookLikeGate />
       <Header />
-      <EbookDownload />
+      <div className="w-full">
+        <EbookDownload />
+      </div>
       <main className="w-full max-w-3xl mx-auto bg-white/80 backdrop-blur-lg shadow-2xl rounded-xl p-6 md:p-10 my-8 flex-grow flex flex-col">
         {showRestartButton && (
           <div className="mb-6 text-center">
