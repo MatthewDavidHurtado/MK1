@@ -97,7 +97,7 @@ const Header: React.FC = () => {
           href="https://www.thereisnothingbutgod.com/tithing"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 app-sans-serif text-base md:text-lg font-medium"
+          className="inline-block py-3 px-6 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-md transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400 app-sans-serif text-base md:text-lg font-medium"
           title="Plant your faith-seed (opens Allow Ministries tithing page in a new tab)"
         >
           Plant your faith-seed. Birth supernatural expectation. Rest, in faith. Receive.
