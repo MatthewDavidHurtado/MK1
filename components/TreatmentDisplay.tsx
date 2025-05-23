@@ -113,28 +113,53 @@ const TreatmentDisplay: React.FC<TreatmentDisplayProps> = ({
             If you feel moved to sow into this work, you can do so through Allow Ministries. Your contribution helps to further the reach of these uplifting truths.
           </p>
 
-          <div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; text-align: left;">
-            <div style="flex: 1;">
-              <h3 style="color: #D8000C;">🚫 This is NOT for you if:</h3>
-              <ul>
-                <li>❌ You roll your eyes at "faith" or "divine flow."</li>
-                <li>❌ You need proof before planting belief.</li>
-                <li>❌ You're only chasing money without purpose.</li>
-                <li>❌ You think hustle is the only path to wealth.</li>
+          {/* Qualification Criteria */}
+          <div className="grid md:grid-cols-2 gap-6 mb-6 text-left">
+            <div className="bg-red-50 p-4 rounded-lg">
+              <h3 className="font-semibold text-lg text-red-800 mb-3">🚫 This is NOT for you if:</h3>
+              <ul className="space-y-2 text-red-700">
+                <li className="flex items-start">
+                  <span className="mr-2">❌</span>
+                  You roll your eyes at "faith" or "divine flow."
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">❌</span>
+                  You need proof before planting belief.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">❌</span>
+                  You're only chasing money without purpose.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">❌</span>
+                  You think hustle is the only path to wealth.
+                </li>
               </ul>
             </div>
-            <div style="flex: 1;">
-              <h3 style="color: #4F8A10;">✅ This IS for you if:</h3>
-              <ul>
-                <li>✅ You believe in spiritual law + divine abundance.</li>
-                <li>✅ You're ready to give and trust supernatural timing.</li>
-                <li>✅ You've tried logic—now you're open to flow.</li>
-                <li>✅ You want overflow that blesses others too.</li>
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h3 className="font-semibold text-lg text-green-800 mb-3">✅ This IS for you if:</h3>
+              <ul className="space-y-2 text-green-700">
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  You believe in spiritual law + divine abundance.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  You're ready to give and trust supernatural timing.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  You've tried logic—now you're open to flow.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  You want overflow that blesses others too.
+                </li>
               </ul>
             </div>
           </div>
 
-          <div className="text-center mt-6">
+          <div className="text-center">
             <a
               href="https://www.thereisnothingbutgod.com/tithing"
               target="_blank"
