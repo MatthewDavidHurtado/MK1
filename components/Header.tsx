@@ -31,10 +31,10 @@ const Header: React.FC = () => {
           href="https://www.thereisnothingbutgod.com/tithing"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm md:text-base text-blue-600 hover:text-blue-700 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 rounded px-1 app-sans-serif transition-colors duration-150 ease-in-out"
+          className="inline-block py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 app-sans-serif text-base md:text-lg font-medium"
           title="Plant your faith-seed (opens Allow Ministries tithing page in a new tab)"
         >
-          'Plant your faith-seed. Birth supernatural expectation. Rest, in faith. Receive.'
+          Plant your faith-seed. Birth supernatural expectation. Rest, in faith. Receive.
         </a>
       </div>
     </header>
