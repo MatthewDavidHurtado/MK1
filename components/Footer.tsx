@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -15,6 +14,21 @@ const Footer: React.FC = () => {
           (inspired by Dr. Hamer's discoveries/German New Medicine), are generated for self-reflection and are not diagnostic. 
           They do not represent actual healing treatments or personal counsel from Malcolm Kingley or any specific authority on Divine Law or German New Medicine.
         </p>
+        <p>
+          ALLOW MINISTRIES<br />
+          508(C)(1)(A) - Registered in the State of Washington.
+        </p>
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
+          <a href="https://thereisnothingbutgod.com/privacy" className="hover:text-blue-600 underline">Privacy Policy</a>
+          <span>|</span>
+          <a href="https://thereisnothingbutgod.com/terms-conditions-1#fabb29ed-cba7-4721-bc63-139a4b4ec7a8" className="hover:text-blue-600 underline">Terms and Conditions</a>
+          <span>|</span>
+          <a href="https://thereisnothingbutgod.com/disclaimer" className="hover:text-blue-600 underline">Disclaimer</a>
+          <span>|</span>
+          <a href="https://thereisnothingbutgod.com/gdpr" className="hover:text-blue-600 underline">GDPR</a>
+          <span>|</span>
+          <a href="https://thereisnothingbutgod.com/cookie-policy" className="hover:text-blue-600 underline">Cookie Policy</a>
+        </div>
         <p className="mt-2">
           The Gemini API key must be configured in the environment variable `process.env.API_KEY`.
         </p>
