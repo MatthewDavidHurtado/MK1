@@ -19,12 +19,22 @@ const TopHeader: React.FC = () => {
             href="https://www.thereisnothingbutgod.com/offers/wFkCkNJN"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 font-bold text-lg glow-button"
+            className="inline-block px-8 py-4 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 font-bold text-lg animate-glow"
+            style={{
+              animation: 'glow 2s ease-in-out infinite',
+            }}
           >
             Click Here to Get My eBook Now
           </a>
         </div>
       </div>
+      <style>{`
+        @keyframes glow {
+          0% { box-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b; }
+          50% { box-shadow: 0 0 10px #f59e0b, 0 0 20px #f59e0b, 0 0 25px #f59e0b; }
+          100% { box-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b; }
+        }
+      `}</style>
     </div>
   );
 };
