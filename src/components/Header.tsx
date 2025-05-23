@@ -22,6 +22,16 @@ const Header: React.FC = () => {
 
   return (
     <header className="w-full text-center py-6 md:py-10">
+      <style>{`
+        @keyframes glow {
+          0% { box-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b; }
+          50% { box-shadow: 0 0 10px #f59e0b, 0 0 20px #f59e0b, 0 0 25px #f59e0b; }
+          100% { box-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b; }
+        }
+        .glow-button {
+          animation: glow 2s ease-in-out infinite;
+        }
+      `}</style>
       <h1 className="text-4xl md:text-5xl font-bold text-blue-900 tracking-tight">
         The Secret to Financial Overflow<br />
         is to Birth Supernatural Expectation<br />
@@ -96,44 +106,44 @@ const Header: React.FC = () => {
       <div className="max-w-2xl mx-auto mb-6 px-4">
         <div className="grid md:grid-cols-2 gap-6 text-left app-sans-serif">
           <div className="bg-red-50 p-4 rounded-lg">
-            <h3 className="font-semibold text-lg text-red-800 mb-3">This is NOT for you if:</h3>
+            <h3 className="font-semibold text-lg text-red-800 mb-3">🚫 This is NOT for you if:</h3>
             <ul className="space-y-2 text-red-700">
               <li className="flex items-start">
                 <span className="mr-2">❌</span>
-                You're skeptical of faith, energy, or spiritual laws.
+                You roll your eyes at "faith" or "divine flow."
               </li>
               <li className="flex items-start">
                 <span className="mr-2">❌</span>
-                You want "proof" before planting your faith-seed.
+                You need proof before planting belief.
               </li>
               <li className="flex items-start">
                 <span className="mr-2">❌</span>
-                You believe wealth is only built by hustle and grind.
+                You're only chasing money without purpose.
               </li>
               <li className="flex items-start">
                 <span className="mr-2">❌</span>
-                You roll your eyes at the idea of divine abundance.
+                You think hustle is the only path to wealth.
               </li>
             </ul>
           </div>
           <div className="bg-green-50 p-4 rounded-lg">
-            <h3 className="font-semibold text-lg text-green-800 mb-3">This is for you if:</h3>
+            <h3 className="font-semibold text-lg text-green-800 mb-3">✅ This IS for you if:</h3>
             <ul className="space-y-2 text-green-700">
               <li className="flex items-start">
                 <span className="mr-2">✅</span>
-                You believe in unseen power, divine timing, and supernatural overflow.
+                You believe in spiritual law + divine abundance.
               </li>
               <li className="flex items-start">
                 <span className="mr-2">✅</span>
-                You're ready to give in faith—and receive without striving.
+                You're ready to give and trust supernatural timing.
               </li>
               <li className="flex items-start">
                 <span className="mr-2">✅</span>
-                You've tried logic and hustle, and now you're ready for alignment.
+                You've tried logic—now you're open to flow.
               </li>
               <li className="flex items-start">
                 <span className="mr-2">✅</span>
-                You feel called to abundance that blesses others too.
+                You want overflow that blesses others too.
               </li>
             </ul>
           </div>
@@ -145,7 +155,7 @@ const Header: React.FC = () => {
           href="https://www.thereisnothingbutgod.com/tithing"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block py-3 px-6 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-md transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400 app-sans-serif text-base md:text-lg font-medium"
+          className="inline-block py-3 px-6 bg-amber-400 hover:bg-amber-500 text-black rounded-lg shadow-md transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400 app-sans-serif text-base md:text-lg font-medium glow-button"
           title="Plant your faith-seed (opens Allow Ministries tithing page in a new tab)"
         >
           Plant your faith-seed. Birth supernatural expectation. Rest, in faith. Receive.
