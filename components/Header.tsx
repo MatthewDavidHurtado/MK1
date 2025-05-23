@@ -1,7 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const Header: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play()
+        .then(() => {
+          setIsPlaying(true);
+          setHasError(false);
+        })
+        .catch((error) => {
+          console.error('Error playing video:', error);
+          setHasError(true);
+        });
+    }
+  };
 
   return (
     <header className="w-full text-center py-6 md:py-10">
@@ -18,21 +35,51 @@ const Header: React.FC = () => {
       <div className="mt-6 mb-4 md:mb-6 max-w-2xl mx-auto">
         <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{padding:"57.82% 0 0 0"}}>
           <video 
+            ref={videoRef}
             controls
             style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}}
-            preload="metadata"
+            preload="auto"
             poster="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg"
             className="object-cover"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
+            onLoadedData={() => setIsLoading(false)}
+            onError={() => {
+              setHasError(true);
+              setIsLoading(false);
+            }}
           >
-            <source src="https://healvideos.s3.us-east-2.amazonaws.com/permanent_overflow_is_yours_already_-_claim_it.+(720p).mp4" type="video/mp4" />
+            <source 
+              src="https://healvideos.s3.us-east-2.amazonaws.com/permanent_overflow_is_yours_already_-_claim_it.+(720p).mp4" 
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
-          {!isPlaying && (
-            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-              <div className="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100 transition-all duration-300">
+          
+          {/* Loading State */}
+          {isLoading && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-4 border-white border-t-transparent"></div>
+            </div>
+          )}
+
+          {/* Play Button Overlay */}
+          {!isPlaying && !isLoading && !hasError && (
+            <div 
+              className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center cursor-pointer"
+              onClick={handlePlay}
+            >
+              <div className="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-300">
                 <div className="w-0 h-0 border-t-[15px] border-t-transparent border-l-[25px] border-l-blue-600 border-b-[15px] border-b-transparent ml-2"></div>
+              </div>
+            </div>
+          )}
+
+          {/* Error State */}
+          {hasError && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white p-4 rounded-lg max-w-sm mx-4">
+                <p className="text-red-600 font-medium">Unable to play video. Please try refreshing the page or check your internet connection.</p>
               </div>
             </div>
           )}
