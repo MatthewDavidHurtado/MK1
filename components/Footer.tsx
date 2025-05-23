@@ -29,9 +29,6 @@ const Footer: React.FC = () => {
           <span>|</span>
           <a href="https://thereisnothingbutgod.com/cookie-policy" className="hover:text-blue-600 underline">Cookie Policy</a>
         </div>
-        <p className="mt-2">
-          The Gemini API key must be configured in the environment variable `process.env.API_KEY`.
-        </p>
         <p>&copy; {new Date().getFullYear()} Allow Ministries. App design and concept based on Divine Law principles.</p>
       </div>
     </footer>
