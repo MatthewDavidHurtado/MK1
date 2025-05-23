@@ -3,12 +3,6 @@ import React, { useState, useEffect } from 'react';
 const FacebookLikeGate: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  const handleContinue = () => {
-    localStorage.setItem('fbLikeGateShown', 'true');
-    setIsVisible(false);
-    window.open('https://www.facebook.com/profile.php?id=61575553085748', '_blank');
-  };
-
   useEffect(() => {
     const hasSeenGate = localStorage.getItem('fbLikeGateShown');
     if (hasSeenGate) {
@@ -16,13 +10,19 @@ const FacebookLikeGate: React.FC = () => {
     }
   }, []);
 
+  const handleContinue = () => {
+    localStorage.setItem('fbLikeGateShown', 'true');
+    setIsVisible(false);
+    window.open('https://www.facebook.com/profile.php?id=61575553085748', '_blank');
+  };
+
   if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 text-center">
         <img 
-          src="https://imgur.com/4xHwLuT" 
+          src="https://i.imgur.com/4xHwLuT.jpg" 
           alt="Malcolm Kingley" 
           className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
         />
