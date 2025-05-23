@@ -34,6 +34,12 @@ const Header: React.FC = () => {
       {/* Video Container */}
       <div className="mt-6 mb-4 md:mb-6 max-w-2xl mx-auto">
         <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{padding:"57.82% 0 0 0"}}>
+          {/* Blur overlay for top of video */}
+          <div 
+            className="absolute top-0 left-0 w-full h-[60px] bg-black/30 backdrop-blur-md z-10"
+            style={{ backdropFilter: 'blur(8px)' }}
+          ></div>
+          
           <video 
             ref={videoRef}
             controls
