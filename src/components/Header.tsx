@@ -55,7 +55,7 @@ const Header: React.FC = () => {
             controls
             style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}}
             preload="auto"
-            poster="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg"
+            poster="https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg"
             className="object-cover"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
